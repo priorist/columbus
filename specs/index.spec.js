@@ -16,31 +16,31 @@
 
 var expect = require('expect.js');
 
-var discovery = require('..')();
+var columbus = require('..')();
 
-describe('The "columbus"', function suite () {
+describe('The "columbus" module', function suite () {
     it('should throw an error when trying to advertise without name and port', function test (done) {
 
         try {
-            discovery.advertise();
+            columbus.advertise();
         } catch (err) {
             expect(err).not.to.be(undefined);
         }
 
         try {
-            discovery.advertise({});
+            columbus.advertise({});
         } catch (err) {
             expect(err).not.to.be(undefined);
         }
 
         try {
-            discovery.advertise({name: 'foo'});
+            columbus.advertise({name: 'foo'});
         } catch (err) {
             expect(err).not.to.be(undefined);
         }
 
         try {
-            discovery.advertise({port: 8080});
+            columbus.advertise({port: 8080});
         } catch (err) {
             expect(err).not.to.be(undefined);
         }
@@ -57,13 +57,15 @@ describe('The "columbus"', function suite () {
         function onAdvertise (err) {
             expect(err).to.be(null);
 
-            discovery.unadvertise(function onUnadvertise (err) {
-                expect(err).to.be(null);
-
-                done();
-            });
+            columbus.halt(onHalt);
         }
 
-        discovery.advertise(options, onAdvertise);
+        function onHalt (err) {
+            expect(err).to.be(null);
+
+            done();
+        }
+
+        columbus.advertise(options, onAdvertise);
     });
 });
