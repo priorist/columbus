@@ -13,9 +13,9 @@ npm install --save columbus
 ### Advertise a service (Server)
 
 ```js
-var discovery = require('columbus')();
+var columbus = require('columbus')();
 
-discovery.advertise({
+columbus.advertise({
     name: 'my-service',
     port: process.env.PORT
 });
@@ -26,9 +26,9 @@ discovery.advertise({
 
 ```js
 
-var discovery = require('columbus')();
+var columbus = require('columbus')();
 
-discovery.need('my-service', function onAnwser (err, config) {
+columbus.need('my-service', function onAnwser (err, config) {
     if (err) {
         return console.error('Meh: ' + err.toString());
     }
