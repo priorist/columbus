@@ -28,7 +28,7 @@ columbus.advertise({
 
 var columbus = require('columbus')();
 
-columbus.need('my-service', function onAnwser (err, config) {
+columbus.need('my-service', function onAnswer (err, config) {
     if (err) {
         return console.error('Meh: ' + err.toString());
     }
