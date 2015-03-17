@@ -13,6 +13,11 @@
     "type": "git",
     "url": "git@github.com:priorist/columbus.git"
   },
+  "pre-commit": [
+    "lint",
+    "checkstyle",
+    "specs"
+  ],
   "keywords": [
     "service discovery",
     "udp",
