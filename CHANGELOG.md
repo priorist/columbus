@@ -1,5 +1,7 @@
 # UNRELEASED
 
+  * bugfix: evaluate keys after error check (will raise a TypeError otherwise).
+
 # 1.1.0 (2015-03-17)
 
   * b9016fb Additional debug message.
