@@ -1,4 +1,4 @@
-# UNRELEASED
+# 1.1.1 (2015-04-07)
 
   * bugfix: evaluate keys after error check (will raise a TypeError otherwise).
 
