@@ -1,4 +1,4 @@
-# UNRELEASED
+# 1.1.2 (2015-04-08)
 
   * 0fd199b exception handling: pass an error object for better stack traces
 
