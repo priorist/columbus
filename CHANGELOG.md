@@ -1,5 +1,7 @@
 # UNRELEASED
 
+  * 0fd199b exception handling: pass an error object for better stack traces
+
 # 1.1.1 (2015-04-07)
 
   * bugfix: evaluate keys after error check (will raise a TypeError otherwise).
