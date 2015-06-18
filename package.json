@@ -1,6 +1,6 @@
 {
   "name": "columbus",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "An UDP-based service discovery module with a simple API.",
   "main": "index.js",
   "scripts": {
