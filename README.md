@@ -40,6 +40,14 @@ columbus.need('my-service', function onAnswer (err, config) {
 
 ```
 
+### ENV variables
+
+If you want to interact with services outside of your subnet (e.g. testing your local environment with online services), 
+you can do so by adding environment variables with ip and port (e.g. "COLUMBUS_SOME_SERVICE=172.1.0.12:8080"). If a matching variable is found, columbus will return that configuration and not initialize further.
+
+The variable should be uppercase with COLUMBUS_ prefix and underscores between words (no dashes). 
+
+
 ## API
 
 ### `advertise(configuration[, callback])`
@@ -56,6 +64,7 @@ provides the following attributes:
   * `name`: The name of the respective service.
   * `ipaddress`: The ip address of the respective service.
   * `port`: The port of the respective service.
+
 
 ## Tests
 
